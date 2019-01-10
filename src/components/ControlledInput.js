@@ -11,6 +11,11 @@ handleChange = event => {
   })
 }
 
+handleSubmit = event => {
+  event.preventDefault()
+  this.sendFormDataSomewhere(this.state)
+}
+
   render() {
     return (
       <form onSubmit={event => this.handleSubmit(event)}>
