@@ -5,12 +5,12 @@ class ControlledInput extends React.Component {
     value: '',
   }
  
-  handleChange = event => {
-    this.setState({
-      value: event.target.value,
-    });
-  }
- 
+handleChange = event => {
+  this.setState({
+    [event.target.name]: event.target.value
+  })
+}
+
   render() {
     return (
       <form onSubmit={event => this.handleSubmit(event)}>
